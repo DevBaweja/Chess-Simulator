@@ -77,7 +77,8 @@ public class Chess extends JPanel implements ActionListener {
 		do {
 			for(int j=0;j<cols;j++)
 				{
-					pieces[i][j].setAlive(true);
+					pieces[i][j].
+					setAlive(true);
 					pieces[i][j].setType(WHITE);
 				}
 		i--;
@@ -118,7 +119,7 @@ public class Chess extends JPanel implements ActionListener {
 		i=rows-1;
 		
 		// White
-		pieces[4][3].setType(WHITE);
+		/*pieces[4][3].setType(WHITE);
 		j=0;makeRook(4,3);
 		pieces[3][5].setType(WHITE);
 		j++;makeKnight(3,5);
@@ -126,19 +127,18 @@ public class Chess extends JPanel implements ActionListener {
 		j++;makeBishop(3,4);
 		pieces[3][2].setType(WHITE);
 		j++;makeQueen(3,2);
+		*/
 		
-		/*
 		j=0;makeRook(i,j);
 		j++;makeKnight(i,j);
 		j++;makeBishop(i,j);
 		j++;makeQueen(i,j);
-		*/
+		
 		// White
 		j=cols-1;makeRook(i,j);
 		j--;makeKnight(i,j);
 		j--;makeBishop(i,j);
-		pieces[5][1].setType(WHITE);
-		j--;makeKing(5,1);
+		j--;makeKing(i,j);
 		
 		
 		// TRIAL
@@ -338,7 +338,7 @@ public class Chess extends JPanel implements ActionListener {
 		setIcon(previ,prevj);
 		//
 		
-		// turn = getOppTurn();
+		 turn = getOppTurn();
 		// changeGrid(); // Grid must be changed after turn change
 		initialValid(valid);	          	
 	}
